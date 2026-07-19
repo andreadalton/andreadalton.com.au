@@ -1,0 +1,1072 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fertile Ground: 12 Week Preconception Preparation | Andrea Dalton</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&family=Barlow+Condensed:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
+<style>
+
+  :root {
+    --cream: #f0ebe0;
+    --cream-deep: #e8e1d2;
+    --ink: #2b2a28;
+    --ink-soft: #5a5650;
+    --slate: #71768a;
+    --blue: #4a9eff;
+    --blue-deep: #2e7fd9;
+    --blue-tint: #c8e4ff;
+    --rose: #c97b63;
+    --rose-soft: #e8d4cc;
+    --line: rgba(43, 42, 40, 0.12);
+    --display: 'Cormorant Garamond', serif;
+    --body: 'DM Sans', sans-serif;
+    --heading-condensed: 'Barlow Condensed', sans-serif;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: var(--cream);
+    color: var(--ink);
+    font-family: var(--body);
+    font-weight: 300;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  a { color: inherit; text-decoration: none; }
+
+  .wrap {
+    max-width: 1080px;
+    margin: 0 auto;
+    padding: 0 32px;
+  }
+
+  @media (max-width: 640px) {
+    .wrap { padding: 0 22px; }
+  }
+
+  /* ---------- NAV ---------- */
+  nav {
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    background: rgba(240, 235, 224, 0.92);
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid var(--line);
+  }
+  nav .wrap {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 88px;
+  }
+  .nav-name-group {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.15;
+  }
+  .nav-name {
+    font-family: var(--display);
+    font-size: 1.35rem;
+    font-weight: 500;
+    letter-spacing: 0.01em;
+  }
+  .nav-title {
+    font-family: var(--heading-condensed);
+    font-weight: 700;
+    font-style: italic;
+    font-size: 0.68rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--slate);
+    margin-top: 3px;
+  }
+  .nav-links {
+    display: flex;
+    gap: 36px;
+    font-size: 0.92rem;
+    letter-spacing: 0.02em;
+  }
+  .nav-links a {
+    opacity: 0.75;
+    transition: opacity 0.2s ease;
+  }
+  .nav-links a:hover, .nav-links a:focus-visible { opacity: 1; }
+  .nav-cta {
+    background: var(--ink);
+    color: var(--cream) !important;
+    padding: 10px 22px;
+    border-radius: 3px;
+    font-size: 0.88rem;
+    opacity: 1 !important;
+  }
+  .nav-cta:hover { background: var(--blue-deep); }
+  @media (max-width: 760px) {
+    .nav-links { display: none; }
+  }
+
+  /* ---------- HERO ---------- */
+  .hero {
+    padding: 96px 0 88px;
+    position: relative;
+    overflow: hidden;
+    background-image: linear-gradient(180deg, rgba(240, 235, 224, 0.45) 0%, rgba(240, 235, 224, 0.7) 45%, var(--cream) 85%), url('images/pregnancy-silhouette-sunset.jpg');
+    background-size: cover;
+    background-position: center 25%;
+    background-repeat: no-repeat;
+  }
+  .eyebrow {
+    font-family: var(--heading-condensed);
+    font-weight: 700;
+    font-style: italic;
+    font-size: 0.95rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--blue-deep);
+    margin-bottom: 22px;
+    display: block;
+  }
+  .hero h1 {
+    font-family: var(--display);
+    font-weight: 300;
+    font-size: clamp(2.4rem, 5.6vw, 4.1rem);
+    line-height: 1.12;
+    letter-spacing: -0.01em;
+    max-width: 880px;
+    margin-bottom: 28px;
+  }
+  .hero h1 em {
+    font-style: italic;
+    font-weight: 500;
+    color: var(--blue-deep);
+  }
+  .hero-sub {
+    font-size: 1.08rem;
+    color: var(--ink-soft);
+    max-width: 620px;
+    margin-bottom: 40px;
+    font-weight: 300;
+  }
+  .hero .hero-sub {
+    font-weight: 500;
+    color: var(--ink);
+  }
+  .hero-ctas {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+  .btn-primary {
+    background: var(--ink);
+    color: var(--cream);
+    padding: 16px 34px;
+    border-radius: 3px;
+    font-size: 0.95rem;
+    letter-spacing: 0.02em;
+    display: inline-block;
+    transition: background 0.2s ease, transform 0.2s ease;
+    border: none;
+    cursor: pointer;
+    font-family: var(--body);
+  }
+  .btn-primary:hover { background: var(--blue-deep); transform: translateY(-1px); }
+  .btn-ghost {
+    color: var(--ink);
+    padding: 16px 8px;
+    font-size: 0.95rem;
+    border-bottom: 1px solid var(--ink);
+    transition: opacity 0.2s ease;
+  }
+  .btn-ghost:hover { opacity: 0.65; }
+
+  /* ---------- WELCOME (INTRO + PHOTO) ---------- */
+  .welcome {
+    padding: 64px 0 88px;
+    border-top: 1px solid var(--line);
+    border-bottom: 1px solid var(--line);
+  }
+  .welcome-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: start; }
+  @media (max-width: 760px) { .welcome-grid { grid-template-columns: 1fr; gap: 36px; } }
+  .welcome-label {
+    font-family: var(--heading-condensed); font-weight: 700; font-style: italic;
+    font-size: 0.85rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--slate);
+  }
+  .welcome-statement {
+    font-family: var(--display); font-size: clamp(1.4rem, 2.4vw, 1.9rem);
+    font-weight: 300; line-height: 1.42; margin-top: 14px;
+  }
+  .welcome-body p { color: var(--ink-soft); font-size: 1rem; margin-bottom: 18px; }
+  .welcome-body p:last-child { margin-bottom: 0; }
+
+  /* ---------- REFRAME STATEMENT ---------- */
+  .reframe {
+    padding: 80px 0;
+    border-top: 1px solid var(--line);
+    border-bottom: 1px solid var(--line);
+  }
+  .reframe-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 64px;
+    align-items: start;
+  }
+  @media (max-width: 760px) {
+    .reframe-grid { grid-template-columns: 1fr; gap: 36px; }
+  }
+  .reframe-label {
+    font-family: var(--heading-condensed);
+    font-weight: 700;
+    font-style: italic;
+    font-size: 0.85rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--slate);
+  }
+  .reframe-statement {
+    font-family: var(--display);
+    font-size: clamp(1.5rem, 2.6vw, 2.1rem);
+    font-weight: 300;
+    line-height: 1.4;
+    margin-top: 14px;
+  }
+  .reframe-body p {
+    color: var(--ink-soft);
+    font-size: 1rem;
+    margin-bottom: 18px;
+  }
+  .reframe-body p:last-child { margin-bottom: 0; }
+
+  /* ---------- PILLARS ---------- */
+  .pillars {
+    padding: 88px 0;
+    background: var(--blue-tint);
+  }
+  .pillars-grid {
+    display: grid;
+    grid-template-columns: 1.15fr 1fr;
+    gap: 56px;
+    align-items: center;
+  }
+  @media (max-width: 760px) {
+    .pillars-grid { grid-template-columns: 1fr; gap: 36px; }
+  }
+  .pillars-head { margin-bottom: 40px; }
+  .pillars-head h2 {
+    font-family: var(--display);
+    font-size: clamp(1.9rem, 3.4vw, 2.5rem);
+    font-weight: 300;
+    line-height: 1.28;
+  }
+  .pillars-head p {
+    margin-top: 16px;
+    color: var(--ink-soft);
+    font-size: 1rem;
+    max-width: 480px;
+  }
+  .pillar-list { display: flex; flex-direction: column; gap: 26px; }
+  .pillar-item { display: flex; gap: 18px; align-items: flex-start; }
+  .pillar-icon {
+    flex-shrink: 0;
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    background: var(--cream);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .pillar-icon svg { width: 20px; height: 20px; }
+  .pillar-copy h3 {
+    font-family: var(--display);
+    font-size: 1.25rem;
+    font-weight: 500;
+    margin-bottom: 6px;
+  }
+  .pillar-copy p {
+    font-size: 0.94rem;
+    color: var(--ink-soft);
+    line-height: 1.55;
+  }
+  .pillars-img {
+    width: 100%;
+    aspect-ratio: 4 / 5;
+    object-fit: cover;
+    border-radius: 4px;
+    display: block;
+  }
+
+  /* ---------- WHO THIS IS FOR ---------- */
+  .signals {
+    padding: 72px 0;
+  }
+  .signals-head {
+    text-align: center;
+    max-width: 640px;
+    margin: 0 auto 48px;
+  }
+  .signals-head h2 {
+    font-family: var(--display);
+    font-size: clamp(1.8rem, 3.4vw, 2.5rem);
+    font-weight: 300;
+  }
+  .signal-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1px;
+    background: var(--line);
+    border: 1px solid var(--line);
+  }
+  @media (max-width: 700px) {
+    .signal-list { grid-template-columns: 1fr; }
+  }
+  .signal-item {
+    background: var(--cream);
+    padding: 28px 30px;
+    font-size: 0.98rem;
+    color: var(--ink-soft);
+  }
+
+  /* ---------- METHOD: SIGNATURE TIMELINE ---------- */
+  .method {
+    padding: 96px 0 100px;
+    background: var(--ink);
+    color: var(--cream);
+  }
+  .method-head {
+    max-width: 640px;
+    margin-bottom: 64px;
+  }
+  .method-head .eyebrow { color: var(--blue); }
+  .method-head h2 {
+    font-family: var(--display);
+    font-weight: 300;
+    font-size: clamp(2rem, 4vw, 2.9rem);
+    line-height: 1.18;
+  }
+  .method-head p {
+    margin-top: 18px;
+    color: rgba(240, 235, 224, 0.65);
+    font-size: 1rem;
+    max-width: 540px;
+  }
+
+  .timeline {
+    position: relative;
+  }
+  .timeline-track {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 28px;
+    position: relative;
+  }
+  .timeline-track::before {
+    content: '';
+    position: absolute;
+    top: 13px;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: rgba(240, 235, 224, 0.18);
+  }
+  @media (max-width: 760px) {
+    .timeline-track { grid-template-columns: 1fr; gap: 0; }
+    .timeline-track::before { display: none; }
+  }
+  .phase {
+    position: relative;
+    padding-top: 40px;
+  }
+  @media (max-width: 760px) {
+    .phase {
+      padding: 28px 0 28px 28px;
+      border-left: 1px solid rgba(240, 235, 224, 0.18);
+    }
+  }
+  .phase-dot {
+    position: absolute;
+    top: 6px;
+    left: 0;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background: var(--blue);
+    box-shadow: 0 0 0 5px var(--ink), 0 0 0 6px rgba(74, 158, 255, 0.4);
+  }
+  @media (max-width: 760px) {
+    .phase-dot { top: 28px; left: -7.5px; box-shadow: 0 0 0 4px var(--ink); }
+  }
+  .phase-week {
+    font-family: var(--heading-condensed);
+    font-style: italic;
+    font-weight: 700;
+    font-size: 0.78rem;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--blue);
+    margin-bottom: 10px;
+    display: block;
+  }
+  .phase-name {
+    font-family: var(--display);
+    font-size: 1.7rem;
+    font-weight: 500;
+    margin-bottom: 10px;
+  }
+  .phase-desc {
+    font-size: 0.92rem;
+    color: rgba(240, 235, 224, 0.7);
+    line-height: 1.55;
+  }
+
+  /* ---------- CREDENTIAL LINE ---------- */
+  .cred-strip {
+    border-top: 1px solid var(--line);
+    padding: 140px 0;
+    background-image: linear-gradient(180deg, var(--cream) 0%, rgba(240, 235, 224, 0.55) 20%, rgba(240, 235, 224, 0.55) 80%, var(--cream) 100%), url('images/pregnancy-belly-sunlit.jpg');
+    background-size: cover;
+    background-position: center 30%;
+    background-repeat: no-repeat;
+  }
+  .cred-strip p {
+    font-family: var(--display);
+    font-style: italic;
+    font-size: clamp(1.15rem, 2.2vw, 1.5rem);
+    font-weight: 500;
+    text-align: center;
+    max-width: 760px;
+    margin: 0 auto;
+    color: var(--ink);
+    line-height: 1.5;
+    text-shadow: 0 2px 18px rgba(240, 235, 224, 0.9), 0 1px 4px rgba(240, 235, 224, 0.95);
+  }
+
+  /* ---------- TESTIMONIALS ---------- */
+  .testimonials {
+    padding: 96px 0;
+    text-align: center;
+  }
+  .testimonials-head {
+    margin-bottom: 56px;
+  }
+  .testimonials-head .eyebrow { margin-bottom: 14px; }
+  .testimonials-head h2 {
+    font-family: var(--display);
+    font-size: clamp(1.9rem, 3.6vw, 2.6rem);
+    font-weight: 300;
+  }
+  .testimonial-stack {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 48px;
+  }
+  .testimonial {
+    max-width: 640px;
+    text-align: left;
+    padding-left: 28px;
+    border-left: 2px solid var(--rose-soft);
+  }
+  .testimonial p {
+    font-size: 1.08rem;
+    color: var(--ink-soft);
+    line-height: 1.7;
+    margin-bottom: 16px;
+  }
+  .testimonial cite {
+    font-family: var(--heading-condensed);
+    font-style: italic;
+    font-weight: 700;
+    font-size: 0.85rem;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: var(--rose);
+  }
+
+  /* ---------- INCLUDED / LOGISTICS ---------- */
+  .included {
+    padding: 88px 0;
+    background: var(--blue-tint);
+    border-top: 1px solid var(--line);
+    border-bottom: 1px solid var(--line);
+  }
+  .included-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 56px;
+  }
+  @media (max-width: 760px) {
+    .included-grid { grid-template-columns: 1fr; gap: 36px; }
+  }
+  .included h2 {
+    font-family: var(--display);
+    font-size: clamp(1.8rem, 3.2vw, 2.4rem);
+    font-weight: 300;
+    margin-bottom: 20px;
+  }
+  .included ul {
+    list-style: none;
+  }
+  .included li {
+    padding: 14px 0;
+    border-bottom: 1px solid var(--line);
+    font-size: 0.97rem;
+    color: var(--ink-soft);
+    display: flex;
+    gap: 14px;
+  }
+  .included li:first-child { padding-top: 0; }
+  .included li::before {
+    content: '—';
+    color: var(--blue-deep);
+    flex-shrink: 0;
+  }
+  .included-note {
+    font-size: 0.92rem;
+    color: var(--slate);
+    margin-top: 20px;
+    font-style: italic;
+    font-family: var(--display);
+  }
+
+  /* ---------- FAQ ---------- */
+  .faq {
+    padding: 96px 0;
+  }
+  .faq-head h2 {
+    font-family: var(--display);
+    font-size: clamp(1.9rem, 3.6vw, 2.6rem);
+    font-weight: 300;
+    margin-bottom: 48px;
+  }
+  .faq-item {
+    border-bottom: 1px solid var(--line);
+  }
+  .faq-item:first-of-type { border-top: 1px solid var(--line); }
+  .faq-q {
+    width: 100%;
+    text-align: left;
+    background: none;
+    border: none;
+    padding: 22px 0;
+    font-family: var(--body);
+    font-size: 1.02rem;
+    color: var(--ink);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    gap: 20px;
+  }
+  .faq-q-icon {
+    flex-shrink: 0;
+    width: 22px;
+    height: 22px;
+    position: relative;
+  }
+  .faq-q-icon::before, .faq-q-icon::after {
+    content: '';
+    position: absolute;
+    background: var(--ink);
+    transition: transform 0.25s ease, opacity 0.25s ease;
+  }
+  .faq-q-icon::before { top: 50%; left: 0; width: 100%; height: 1px; transform: translateY(-50%); }
+  .faq-q-icon::after { left: 50%; top: 0; width: 1px; height: 100%; transform: translateX(-50%); }
+  .faq-item[data-open="true"] .faq-q-icon::after { opacity: 0; }
+  .faq-a {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+  }
+  .faq-a-inner {
+    padding-bottom: 22px;
+    color: var(--ink-soft);
+    font-size: 0.96rem;
+    max-width: 680px;
+    line-height: 1.65;
+  }
+
+  /* ---------- TERMS ---------- */
+  .terms {
+    padding: 72px 0;
+    background: var(--cream-deep);
+    border-top: 1px solid var(--line);
+  }
+  .terms h2 {
+    font-family: var(--display);
+    font-size: clamp(1.6rem, 2.8vw, 2.1rem);
+    font-weight: 300;
+    margin-bottom: 32px;
+  }
+  .terms-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 32px 48px;
+  }
+  @media (max-width: 700px) {
+    .terms-grid { grid-template-columns: 1fr; }
+  }
+  .terms-block h3 {
+    font-family: var(--heading-condensed);
+    font-weight: 700;
+    font-style: italic;
+    font-size: 0.85rem;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: var(--slate);
+    margin-bottom: 8px;
+  }
+  .terms-block p {
+    font-size: 0.88rem;
+    color: var(--ink-soft);
+    line-height: 1.6;
+  }
+
+  /* ---------- FINAL CTA ---------- */
+  .final-cta {
+    padding: 110px 0;
+    text-align: center;
+  }
+  .final-cta h2 {
+    font-family: var(--display);
+    font-weight: 300;
+    font-size: clamp(2rem, 4.6vw, 3.2rem);
+    max-width: 760px;
+    margin: 0 auto 28px;
+    line-height: 1.2;
+  }
+  .final-cta h2 em {
+    font-style: italic;
+    font-weight: 500;
+    color: var(--blue-deep);
+  }
+  .final-cta p {
+    color: var(--ink-soft);
+    max-width: 480px;
+    margin: 0 auto 36px;
+  }
+
+  footer {
+    border-top: 1px solid var(--line);
+    padding: 48px 0;
+  }
+  .footer-grid {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  .footer-name {
+    font-family: var(--display);
+    font-size: 1.1rem;
+  }
+  .footer-links {
+    display: flex;
+    gap: 28px;
+    font-size: 0.85rem;
+  }
+  .footer-links a { opacity: 0.7; }
+  .footer-links a:hover { opacity: 1; }
+  .footer-meta {
+    font-size: 0.78rem;
+    color: var(--slate);
+    margin-top: 24px;
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--blue-deep);
+    outline-offset: 2px;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    * { transition: none !important; }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="wrap">
+    <div class="nav-name-group">
+      <span class="nav-name">Andrea Dalton</span>
+      <span class="nav-title">Clinical Naturopath</span>
+    </div>
+    <div class="nav-links">
+      <a href="naturopathy.html">Naturopathy</a>
+      <a href="fertile-ground.html" style="opacity:1;">Fertile Ground</a>
+    </div>
+    <a href="https://andrea-dalton.simplecliniconline.com/diary" class="nav-cta">Book a discovery call</a>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="wrap" style="text-align: center; display: flex; flex-direction: column; align-items: center;">
+    <span class="eyebrow">The 12 Week Women's Preconception Preparation Method</span>
+    <h1 style="max-width: 880px;">It's not just about whether you can conceive. It's whether your body is <em>truly ready</em> to.</h1>
+    <p class="hero-sub" style="max-width: 620px; margin-left: auto; margin-right: auto;">Stop relying on social media, late night Googling and hope. Fertile Ground gives you an individualised plan and practitioner guidance well in advance of trying, so when the window opens, you're not guessing.</p>
+
+    <div class="hero-ctas" style="margin: 8px 0 36px;">
+      <a href="https://andrea-dalton.simplecliniconline.com/diary" class="btn-primary">Book a discovery call</a>
+    </div>
+  </div>
+</header>
+
+<section class="welcome">
+  <div class="wrap welcome-grid" style="grid-template-columns: 0.9fr 1.1fr; align-items: center;">
+    <div>
+      <img src="images/andrea-desk.jpg" alt="Andrea Dalton smiling at her desk" style="width: 100%; height: 100%; object-fit: cover; border-radius: 4px; display: block; min-height: 380px;">
+    </div>
+    <div>
+      <span class="welcome-label">Why I built this program</span>
+      <p class="welcome-statement">Preparing for pregnancy deserves more than a multivitamin and hope.</p>
+      <div class="welcome-body" style="margin-top: 24px;">
+        <p>When women come to me preparing for pregnancy, I see the same pattern again and again: bloods that come back "normal," symptoms brushed aside, and a vague instruction to just relax and let it happen. That's not enough when there's this much you can actually work with.</p>
+        <p>Fertile Ground exists so you're not guessing. We look properly at your gut, your hormones and your vaginal microbiome, build a plan around what we find, and work through it together over 12 weeks, so you walk into trying feeling prepared rather than hopeful.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="reframe">
+  <div class="wrap reframe-grid">
+    <div>
+      <span class="reframe-label">The real challenge</span>
+      <p class="reframe-statement">For most women, the hard part before conception isn't getting pregnant. It's not knowing whether your body is ready.</p>
+    </div>
+    <div class="reframe-body">
+      <p>Preparing for pregnancy is one of the most important health transitions a woman will experience. Yet many women begin trying while still dealing with bloating, digestive discomfort, recurring thrush or BV, irregular cycles, fatigue or nutrient deficiencies they've been told are "normal."</p>
+      <p>You may wonder whether your gut health is affecting your hormones. You may have tried diets, supplements and advice online without understanding what's actually driving things. Or you simply want to walk into pregnancy knowing you've done everything you could to prepare.</p>
+      <p>Fertile Ground was built to close that gap: a structured, individualised, practitioner guided process, starting with real data instead of guesswork.</p>
+    </div>
+  </div>
+</section>
+
+<section class="pillars">
+  <div class="wrap pillars-grid">
+    <div>
+      <div class="pillars-head">
+        <span class="eyebrow">What the program actually works on</span>
+        <h2>It's not just "preconception." It's your gut, your hormones and your vaginal microbiome.</h2>
+        <p>These are the same foundations that shape your cycle, energy and long term health, whether pregnancy is next month or a few years away.</p>
+      </div>
+      <div class="pillar-list">
+        <div class="pillar-item">
+          <div class="pillar-copy">
+            <h3>Gut health</h3>
+            <p>Digestion, inflammation and nutrient absorption underpin hormone production and how well your body can support a future pregnancy.</p>
+          </div>
+        </div>
+        <div class="pillar-item">
+          <div class="pillar-copy">
+            <h3>Hormone balance</h3>
+            <p>Cycle regularity, ovulation and hormone patterns are tracked and supported, not just assumed "normal" because bloods came back clear.</p>
+          </div>
+        </div>
+        <div class="pillar-item">
+          <div class="pillar-copy">
+            <h3>Vaginal microbiome</h3>
+            <p>Recurring thrush, BV or imbalance are investigated and treated, since vaginal health plays a direct role in fertility and pregnancy outcomes.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <img src="images/herbal-tinctures.jpg" alt="Herbal tinctures prepared for a client" class="pillars-img">
+  </div>
+</section>
+
+<section class="signals">
+  <div class="wrap">
+    <div class="signals-head">
+      <h2>This program is for you if</h2>
+    </div>
+    <div style="display: grid; grid-template-columns: 1fr 1.3fr; gap: 40px; align-items: stretch;">
+      <img src="images/pregnancy-belly-field.jpg" alt="Pregnant woman resting in a sunlit field" style="width: 100%; height: 100%; object-fit: cover; object-position: center 30%; border-radius: 4px; display: block;">
+      <div class="signal-list" style="display: flex; flex-direction: column; gap: 1px; height: 100%;">
+        <div class="signal-item" style="flex: 1; display: flex; align-items: center;">You're planning to try for a baby in the next 3 to 12 months and want your body genuinely prepared, not just "off the pill."</div>
+        <div class="signal-item" style="flex: 1; display: flex; align-items: center;">You've had bloods come back "normal" but you don't feel normal, and you want a deeper, functional look.</div>
+        <div class="signal-item" style="flex: 1; display: flex; align-items: center;">You deal with recurring thrush, BV, bloating or irregular cycles and suspect they're connected.</div>
+        <div class="signal-item" style="flex: 1; display: flex; align-items: center;">You already have a diagnosis like PCOS, endometriosis or recurrent thrush and want a plan built around it.</div>
+        <div class="signal-item" style="flex: 1; display: flex; align-items: center;">You've done some fertility testing already but want it interpreted and acted on, not filed away.</div>
+        <div class="signal-item" style="flex: 1; display: flex; align-items: center;">You want a practitioner in your corner instead of piecing things together from forums and ChatGPT.</div>
+      </div>
+    </div>
+    <p style="max-width: 640px; margin: 40px auto 0; text-align: center; color: var(--ink-soft); font-size: 1rem;">Not planning to conceive right now, or not sure it's on the cards at all? I'm here to support you as well — <a href="naturopathy.html" style="color: var(--blue-deep); border-bottom: 1px solid var(--blue-deep);">see how we can work together</a>.</p>
+  </div>
+</section>
+
+<section class="method" id="method">
+  <div class="wrap">
+    <div class="method-head">
+      <span class="eyebrow">Andrea's 4-Phase Cycle Ready Method</span>
+      <h2>A structured path from uncertainty to a clear, trying ready plan.</h2>
+      <p>Built on Andrea's clinical specialty in women's preconception health, with a track record in cycle regulation, hormone balance and nutrient repletion before conception.</p>
+    </div>
+    <div class="timeline">
+      <div class="timeline-track">
+        <div class="phase">
+          <span class="phase-dot"></span>
+          <span class="phase-week">Week 1</span>
+          <h3 class="phase-name">Investigate</h3>
+          <p class="phase-desc">A full preconception blood panel and functional review, plus gut and vaginal microbiome testing, so your plan starts with real data, not guesswork.</p>
+        </div>
+        <div class="phase">
+          <span class="phase-dot"></span>
+          <span class="phase-week">Weeks 2 to 3</span>
+          <h3 class="phase-name">Reset</h3>
+          <p class="phase-desc">A targeted supplement protocol and nutrition plan built directly around your labs and microbiome results.</p>
+        </div>
+        <div class="phase">
+          <span class="phase-dot"></span>
+          <span class="phase-week">Weeks 4 to 8</span>
+          <h3 class="phase-name">Regulate</h3>
+          <p class="phase-desc">Cycle tracking and hormone optimisation, with your plan evolving in regular consultations as your body responds.</p>
+        </div>
+        <div class="phase">
+          <span class="phase-dot"></span>
+          <span class="phase-week">Final weeks</span>
+          <h3 class="phase-name">Refine</h3>
+          <p class="phase-desc">Final adjustments and a clear roadmap for trying to conceive, to carry with you into the months ahead.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="cred-strip">
+  <div class="wrap">
+    <p>"By the end, the goal isn't more information. It's that you feel confident you've addressed the key foundations known to influence reproductive health."</p>
+  </div>
+</section>
+
+<section class="testimonials">
+  <div class="wrap">
+    <div class="testimonials-head">
+      <span class="eyebrow">In their words</span>
+      <h2>What women say about working with Andrea</h2>
+    </div>
+    <div class="testimonial-stack">
+      <div class="testimonial">
+        <p>"I've been working with Andrea for quite some time now, and she is amazing! She has been instrumental in improving my gut health, balancing my hormones, and guiding me toward a healthier lifestyle with tailored eating and exercise plans. Andrea is incredibly knowledgeable and compassionate, always taking the time to understand my needs and support my goals."</p>
+        <cite>Zoe</cite>
+      </div>
+      <div class="testimonial">
+        <p>"Andrea is bloody amazing! Being new to town earlier this year I was on the hunt for a naturopath for both my husband and I & boy did I strike gold! She sees her clients as a whole person and is so supportive and realistic in her approach to health and lifestyle change. Both of us have seen amazing results since we've been working together."</p>
+        <cite>Grace</cite>
+      </div>
+      <div class="testimonial">
+        <p>"Andrea is a fantastic naturopath with extensive knowledge across various areas. Her non judgemental environment ensures you feel heard and at ease during your consultation."</p>
+        <cite>Nez</cite>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="included">
+  <div class="wrap included-grid">
+    <div>
+      <h2>What's included</h2>
+      <ul>
+        <li>Full preconception blood panel and functional review</li>
+        <li>Gut and vaginal microbiome testing</li>
+        <li>Personalised nutrition and supplement protocol</li>
+        <li>Regular one-on-one consultations across the 12 weeks</li>
+        <li>Private community space with other women preparing for pregnancy</li>
+      </ul>
+    </div>
+    <div>
+      <h2>Worth knowing</h2>
+      <ul>
+        <li>Herbal prescriptions and practitioner-grade supplements are prescribed as needed and charged separately</li>
+        <li>Payment is required prior to commencement, with a payment plan option available</li>
+        <li>Appointments need at least 24 hours' notice to reschedule</li>
+        <li>This program supports preconception health. It doesn't replace medical care or guarantee conception</li>
+      </ul>
+      <p class="included-note">Full terms are below. Nothing hidden, no surprises partway through.</p>
+    </div>
+  </div>
+</section>
+
+<section class="faq" id="faq">
+  <div class="wrap">
+    <div class="faq-head">
+      <h2>Common questions</h2>
+    </div>
+    <div class="faq-list">
+
+      <div class="faq-item" data-open="false">
+        <button class="faq-q" aria-expanded="false">
+          Do I need to be actively trying to conceive to join this program?
+          <span class="faq-q-icon"></span>
+        </button>
+        <div class="faq-a"><div class="faq-a-inner">No. Many women join 3 to 12 months before they plan to start trying, which gives the program time to do its work: investigating, resetting and regulating before the trying window opens.</div></div>
+      </div>
+
+      <div class="faq-item" data-open="false">
+        <button class="faq-q" aria-expanded="false">
+          What if I don't have any major symptoms but want to prepare my body?
+          <span class="faq-q-icon"></span>
+        </button>
+        <div class="faq-a"><div class="faq-a-inner">That's a great reason to join. The investigation phase looks beneath the surface. Symptoms aren't required for there to be foundations worth strengthening before conception.</div></div>
+      </div>
+
+      <div class="faq-item" data-open="false">
+        <button class="faq-q" aria-expanded="false">
+          What if I already have a diagnosis like PCOS, endometriosis or recurring thrush?
+          <span class="faq-q-icon"></span>
+        </button>
+        <div class="faq-a"><div class="faq-a-inner">Your plan is built around your existing diagnosis and history, not in spite of it. The testing and consultations help tailor the protocol specifically to what you're managing.</div></div>
+      </div>
+
+      <div class="faq-item" data-open="false">
+        <button class="faq-q" aria-expanded="false">
+          What if I have already done fertility testing?
+          <span class="faq-q-icon"></span>
+        </button>
+        <div class="faq-a"><div class="faq-a-inner">Bring it with you. We'll review what you have, identify what's missing, and build your plan from the fullest possible picture rather than starting again from scratch.</div></div>
+      </div>
+
+      <div class="faq-item" data-open="false">
+        <button class="faq-q" aria-expanded="false">
+          Will I need to take supplements?
+          <span class="faq-q-icon"></span>
+        </button>
+        <div class="faq-a"><div class="faq-a-inner">Most participants are prescribed a targeted supplement protocol based on their labs, though this is individualised. Herbal medicine and supplements are charged separately to the program fee.</div></div>
+      </div>
+
+      <div class="faq-item" data-open="false">
+        <button class="faq-q" aria-expanded="false">
+          How much time do I need to commit to the program each week?
+          <span class="faq-q-icon"></span>
+        </button>
+        <div class="faq-a"><div class="faq-a-inner">Outside of scheduled consultations and group sessions, most of the work is built into daily life: meals, supplements and cycle tracking, rather than requiring extra set aside time.</div></div>
+      </div>
+
+      <div class="faq-item" data-open="false">
+        <button class="faq-q" aria-expanded="false">
+          What if I am not planning pregnancy immediately?
+          <span class="faq-q-icon"></span>
+        </button>
+        <div class="faq-a"><div class="faq-a-inner">That's still a valid reason to start. Many of the foundations this program addresses, like gut health, hormone balance and nutrient stores, take time to shift, so earlier preparation gives better results.</div></div>
+      </div>
+
+      <div class="faq-item" data-open="false">
+        <button class="faq-q" aria-expanded="false">
+          Will this program guarantee that I will get pregnant?
+          <span class="faq-q-icon"></span>
+        </button>
+        <div class="faq-a"><div class="faq-a-inner">No program can guarantee conception, and this one doesn't either. What it does is address the key foundations known to influence reproductive health, so you move forward informed and prepared rather than guessing.</div></div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section class="terms">
+  <div class="wrap">
+    <h2>Terms & conditions</h2>
+    <div class="terms-grid">
+      <div class="terms-block">
+        <h3>Program duration</h3>
+        <p>This program runs for 12 weeks from the start date of the group program. All consultations, testing and inclusions are scheduled within this timeframe.</p>
+      </div>
+      <div class="terms-block">
+        <h3>Payment & refunds</h3>
+        <p>Payment is required prior to commencement. Payments are not refundable, as testing, resources and consultation time are allocated once the program begins. Clients may pay in full or via an agreed payment plan.</p>
+      </div>
+      <div class="terms-block">
+        <h3>Payment plans</h3>
+        <p>Payment plans are a contractual agreement and must be completed in full, even if a participant chooses to discontinue the program before completion.</p>
+      </div>
+      <div class="terms-block">
+        <h3>Rescheduling & cancellations</h3>
+        <p>Appointments must be rescheduled or cancelled with at least 24 hours' notice. Missed appointments without sufficient notice will be forfeited and may not be rescheduled.</p>
+      </div>
+      <div class="terms-block">
+        <h3>Testing included</h3>
+        <p>This program includes gut microbiome and vaginal microbiome testing. These tests are an essential part of the program and guide your personalised treatment plan.</p>
+      </div>
+      <div class="terms-block">
+        <h3>Herbal medicine & supplements</h3>
+        <p>Herbal prescriptions and practitioner-grade supplements are not included in the program price and are charged separately if prescribed.</p>
+      </div>
+      <div class="terms-block">
+        <h3>Community access</h3>
+        <p>The program includes access to a private community space, designed to provide additional support and shared learning, not to replace individual consultations.</p>
+      </div>
+      <div class="terms-block">
+        <h3>No medical guarantees</h3>
+        <p>This program is designed to support preconception health and optimise the body in preparation for pregnancy. Individual results will vary, and participation does not guarantee conception. This program does not replace medical care.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="vsl-embed" style="padding: 8px 0 0;">
+  <div class="wrap" style="text-align: center; max-width: 720px; margin: 0 auto;">
+    <span class="eyebrow" style="display: block; margin-bottom: 18px;">Watch first</span>
+    <div class="hero-video" style="position: relative; width: 100%; aspect-ratio: 16 / 9; border-radius: 4px; overflow: hidden; background: var(--ink);">
+      <iframe
+        src="https://www.youtube.com/embed/0hmU-GXZfmM"
+        title="Fertile Ground: the 12 Week Women's Preconception Preparation Method"
+        style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0;"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen
+        loading="lazy">
+      </iframe>
+    </div>
+  </div>
+</section>
+
+<section class="final-cta" id="enrol-final">
+  <div class="wrap">
+    <h2>Start preparing, <em>before</em> the trying window opens.</h2>
+    <p>Get in touch to check availability for the next intake and ask anything that's still unclear.</p>
+    <a href="https://andrea-dalton.simplecliniconline.com/diary" class="btn-primary">Book a discovery call</a>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="footer-grid">
+      <span class="footer-name">Andrea Dalton</span>
+      <div class="footer-links">
+        <a href="naturopathy.html">Naturopathy</a>
+        <a href="fertile-ground.html">Fertile Ground</a>
+      </div>
+    </div>
+    <p class="footer-meta">© 2026 Andrea Dalton. This program supports preconception health and does not replace medical care or guarantee conception.</p>
+  </div>
+</footer>
+
+<script>
+  document.querySelectorAll('.faq-item').forEach(item => {
+    const btn = item.querySelector('.faq-q');
+    const answer = item.querySelector('.faq-a');
+    btn.addEventListener('click', () => {
+      const isOpen = item.getAttribute('data-open') === 'true';
+      // close others
+      document.querySelectorAll('.faq-item').forEach(other => {
+        if (other !== item) {
+          other.setAttribute('data-open', 'false');
+          other.querySelector('.faq-q').setAttribute('aria-expanded', 'false');
+          other.querySelector('.faq-a').style.maxHeight = null;
+        }
+      });
+      const newState = !isOpen;
+      item.setAttribute('data-open', String(newState));
+      btn.setAttribute('aria-expanded', String(newState));
+      answer.style.maxHeight = newState ? answer.scrollHeight + 'px' : null;
+    });
+  });
+</script>
+
+</body>
+</html>
