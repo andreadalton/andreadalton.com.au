@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Naturopathy Consultations | Andrea Dalton</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&family=Barlow+Condensed:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
+<style>
+
+  :root {
+    --cream: #f0ebe0;
+    --cream-deep: #e8e1d2;
+    --ink: #2b2a28;
+    --ink-soft: #5a5650;
+    --slate: #71768a;
+    --blue: #4a9eff;
+    --blue-deep: #2e7fd9;
+    --rose: #c97b63;
+    --rose-soft: #e8d4cc;
+    --line: rgba(43, 42, 40, 0.12);
+    --display: 'Cormorant Garamond', serif;
+    --body: 'DM Sans', sans-serif;
+    --heading-condensed: 'Barlow Condensed', sans-serif;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: var(--cream);
+    color: var(--ink);
+    font-family: var(--body);
+    font-weight: 300;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  a { color: inherit; text-decoration: none; }
+
+  .wrap { max-width: 1080px; margin: 0 auto; padding: 0 32px; }
+  @media (max-width: 640px) { .wrap { padding: 0 22px; } }
+
+  /* ---------- NAV ---------- */
+  nav {
+    position: sticky; top: 0; z-index: 50;
+    background: rgba(240, 235, 224, 0.92);
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid var(--line);
+  }
+  nav .wrap { display: flex; align-items: center; justify-content: space-between; height: 88px; }
+  .nav-name-group { display: flex; flex-direction: column; line-height: 1.15; }
+  .nav-name { font-family: var(--display); font-size: 1.35rem; font-weight: 500; letter-spacing: 0.01em; }
+  .nav-title {
+    font-family: var(--heading-condensed); font-weight: 700; font-style: italic;
+    font-size: 0.68rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--slate); margin-top: 3px;
+  }
+  .nav-links { display: flex; gap: 36px; font-size: 0.92rem; letter-spacing: 0.02em; }
+  .nav-links a { opacity: 0.75; transition: opacity 0.2s ease; }
+  .nav-links a:hover, .nav-links a:focus-visible { opacity: 1; }
+  .nav-cta {
+    background: var(--ink); color: var(--cream) !important;
+    padding: 10px 22px; border-radius: 3px; font-size: 0.88rem; opacity: 1 !important;
+  }
+  .nav-cta:hover { background: var(--blue-deep); }
+  @media (max-width: 760px) {
+    nav .wrap { flex-wrap: wrap; height: auto; padding: 14px 22px; row-gap: 10px; justify-content: center; text-align: center; }
+    .nav-name-group { width: 100%; align-items: center; }
+    .nav-links { order: 3; width: 100%; justify-content: center; gap: 24px; font-size: 0.85rem; }
+  }
+
+  /* ---------- HERO ---------- */
+  .hero { padding: 96px 0 72px; }
+  .eyebrow {
+    font-family: var(--heading-condensed); font-weight: 700; font-style: italic;
+    font-size: 0.95rem; letter-spacing: 0.08em; text-transform: uppercase;
+    color: var(--blue-deep); margin-bottom: 22px; display: block;
+  }
+  .hero h1 {
+    font-family: var(--display); font-weight: 300;
+    font-size: clamp(2.2rem, 5vw, 3.6rem); line-height: 1.15;
+    letter-spacing: -0.01em; max-width: 760px; margin-bottom: 26px;
+  }
+  .hero-sub { font-size: 1.05rem; color: var(--ink-soft); max-width: 600px; margin-bottom: 16px; }
+  .hero-note {
+    font-size: 1.05rem; color: var(--slate); font-style: italic;
+    font-family: var(--display); margin-top: 28px;
+  }
+
+  /* ---------- WELCOME ---------- */
+  .welcome {
+    padding: 64px 0 88px;
+    border-top: 1px solid var(--line);
+    border-bottom: 1px solid var(--line);
+  }
+  .welcome-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: start; }
+  @media (max-width: 760px) { .welcome-grid { grid-template-columns: 1fr; gap: 36px; } }
+  .welcome-label {
+    font-family: var(--heading-condensed); font-weight: 700; font-style: italic;
+    font-size: 0.85rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--slate);
+  }
+  .welcome-statement {
+    font-family: var(--display); font-size: clamp(1.4rem, 2.4vw, 1.9rem);
+    font-weight: 300; line-height: 1.42; margin-top: 14px;
+  }
+  .welcome-body p { color: var(--ink-soft); font-size: 1rem; margin-bottom: 18px; }
+  .welcome-body p:last-child { margin-bottom: 0; }
+
+  /* ---------- CONSULT PRICING ---------- */
+  .consults { padding: 96px 0; }
+  .consults-head { text-align: center; max-width: 640px; margin: 0 auto 56px; }
+  .consults-head h2 { font-family: var(--display); font-size: clamp(1.9rem, 3.6vw, 2.6rem); font-weight: 300; }
+  .consult-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 28px; }
+  @media (max-width: 760px) { .consult-grid { grid-template-columns: 1fr; } }
+  .consult-card {
+    background: var(--cream-deep);
+    border: 1px solid var(--line);
+    border-radius: 4px;
+    padding: 40px 36px;
+    display: flex;
+    flex-direction: column;
+  }
+  .consult-card.featured { border-color: var(--blue-deep); border-width: 2px; }
+  .consult-badge {
+    font-family: var(--heading-condensed); font-weight: 700; font-style: italic;
+    font-size: 0.75rem; letter-spacing: 0.06em; text-transform: uppercase;
+    color: var(--blue-deep); margin-bottom: 16px;
+  }
+  .consult-name { font-family: var(--display); font-size: 1.6rem; font-weight: 500; margin-bottom: 4px; }
+  .consult-meta { font-size: 0.88rem; color: var(--slate); margin-bottom: 18px; }
+  .consult-price {
+    font-family: var(--display); font-size: 2.4rem; font-weight: 300; color: var(--ink);
+    margin-bottom: 20px;
+  }
+  .consult-desc { font-size: 0.95rem; color: var(--ink-soft); line-height: 1.6; margin-bottom: 24px; flex-grow: 1; }
+  .consult-note {
+    font-size: 0.85rem; color: var(--ink-soft); background: rgba(74, 158, 255, 0.08);
+    border-radius: 3px; padding: 14px 16px; margin-bottom: 24px; line-height: 1.55;
+  }
+  .consult-note strong { color: var(--ink); }
+  .btn-primary {
+    background: var(--ink); color: var(--cream);
+    padding: 15px 28px; border-radius: 3px; font-size: 0.92rem;
+    letter-spacing: 0.02em; display: inline-block; text-align: center;
+    transition: background 0.2s ease, transform 0.2s ease; border: none; cursor: pointer;
+  }
+  .btn-primary:hover { background: var(--blue-deep); transform: translateY(-1px); }
+  .pricing-effective {
+    text-align: center; font-size: 0.82rem; color: var(--slate);
+    font-style: italic; font-family: var(--display); margin-top: 32px;
+  }
+
+  /* ---------- WHY NATUROPATHY ---------- */
+  .why { padding: 96px 0; background: var(--ink); color: var(--cream); }
+  .why-grid { display: grid; grid-template-columns: 0.9fr 1.1fr; gap: 64px; align-items: start; }
+  @media (max-width: 760px) { .why-grid { grid-template-columns: 1fr; gap: 36px; } }
+  .why .eyebrow { color: var(--blue); }
+  .why h2 {
+    font-family: var(--display); font-weight: 300; font-size: clamp(2rem, 3.8vw, 2.7rem);
+    line-height: 1.18; margin-top: 4px;
+  }
+  .why-body p {
+    color: rgba(240, 235, 224, 0.75); font-size: 1rem; margin-bottom: 18px; line-height: 1.7;
+  }
+  .why-body p:last-child { margin-bottom: 0; }
+  .why-question {
+    font-family: var(--display); font-style: italic; font-size: 1.3rem;
+    color: var(--blue); margin-top: 24px;
+  }
+
+  /* ---------- QUOTE ---------- */
+  .cred-strip {
+    padding: 130px 0;
+    background-image: linear-gradient(180deg, var(--cream) 0%, rgba(240, 235, 224, 0.72) 20%, rgba(240, 235, 224, 0.72) 80%, var(--cream) 100%), url('images/herbal-tinctures.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  .cred-strip p {
+    font-family: var(--display); font-style: italic; font-size: clamp(1.15rem, 2.2vw, 1.5rem);
+    font-weight: 300; text-align: center; max-width: 720px; margin: 0 auto;
+    color: var(--ink-soft); line-height: 1.5;
+  }
+  .cred-strip cite {
+    display: block; text-align: center; margin-top: 16px;
+    font-family: var(--heading-condensed); font-style: italic; font-weight: 700;
+    font-size: 0.85rem; letter-spacing: 0.04em; text-transform: uppercase; color: var(--rose);
+  }
+
+  /* ---------- CONDITIONS I WORK WITH ---------- */
+  .conditions { padding: 88px 0; }
+  .conditions-head { text-align: center; max-width: 640px; margin: 0 auto 44px; }
+  .conditions-head h2 { font-family: var(--display); font-size: clamp(1.8rem, 3.4vw, 2.5rem); font-weight: 300; }
+  .conditions-head p { color: var(--ink-soft); font-size: 1rem; margin-top: 14px; }
+  .conditions-grid {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 1px;
+    background: var(--line); border: 1px solid var(--line);
+  }
+  @media (max-width: 700px) { .conditions-grid { grid-template-columns: 1fr; } }
+  .conditions-item { background: var(--cream); padding: 22px 28px; font-size: 0.97rem; color: var(--ink-soft); }
+  .conditions-note { text-align: center; font-size: 0.88rem; color: var(--slate); font-style: italic; font-family: var(--display); margin-top: 28px; }
+
+  /* ---------- TESTING PARTNERS ---------- */
+  .testing { padding: 88px 0; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+  .testing-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 56px; align-items: start; }
+  @media (max-width: 760px) { .testing-grid { grid-template-columns: 1fr; gap: 36px; } }
+  .testing h2 { font-family: var(--display); font-size: clamp(1.8rem, 3.2vw, 2.4rem); font-weight: 300; margin-bottom: 16px; }
+  .testing-intro { color: var(--ink-soft); font-size: 0.98rem; margin-bottom: 24px; line-height: 1.65; }
+  .testing-labs { display: flex; flex-wrap: wrap; gap: 10px; }
+  .testing-lab {
+    font-family: var(--heading-condensed); font-weight: 700; font-style: italic;
+    font-size: 0.85rem; letter-spacing: 0.02em; padding: 10px 18px;
+    border: 1px solid var(--line); border-radius: 3px; color: var(--ink-soft);
+  }
+  .testing-areas-label {
+    font-family: var(--heading-condensed); font-weight: 700; font-style: italic;
+    font-size: 0.78rem; letter-spacing: 0.08em; text-transform: uppercase;
+    color: var(--slate); margin-bottom: 14px;
+  }
+  .testing-areas { list-style: none; }
+  .testing-areas li {
+    padding: 13px 0; border-bottom: 1px solid var(--line);
+    font-size: 0.95rem; color: var(--ink-soft); display: flex; gap: 14px;
+  }
+  .testing-areas li:first-child { padding-top: 0; }
+  .testing-areas li::before { content: '—'; color: var(--blue-deep); flex-shrink: 0; }
+
+  /* ---------- CREDENTIALS ---------- */
+  .credentials { padding: 96px 0; }
+  .credentials-head { max-width: 640px; margin-bottom: 48px; }
+  .credentials-head h2 { font-family: var(--display); font-size: clamp(1.9rem, 3.6vw, 2.6rem); font-weight: 300; margin-bottom: 14px; }
+  .credentials-head p { color: var(--ink-soft); font-size: 1rem; }
+  .credentials-list { list-style: none; }
+  .credentials-list li {
+    padding: 18px 0; border-bottom: 1px solid var(--line);
+    font-size: 1rem; color: var(--ink-soft); display: flex; gap: 16px; align-items: baseline;
+  }
+  .credentials-list li:first-child { padding-top: 0; }
+  .cred-marker {
+    font-family: var(--display); font-style: italic; color: var(--blue-deep);
+    font-size: 1.1rem; flex-shrink: 0;
+  }
+  .cred-text strong { color: var(--ink); font-weight: 500; }
+
+  /* ---------- TERMS ---------- */
+  .terms { padding: 88px 0; background: var(--cream-deep); border-top: 1px solid var(--line); }
+  .terms-head { margin-bottom: 40px; }
+  .terms-head h2 { font-family: var(--display); font-size: clamp(1.8rem, 3.2vw, 2.4rem); font-weight: 300; }
+  .terms-section { margin-bottom: 36px; }
+  .terms-section:last-child { margin-bottom: 0; }
+  .terms-section h3 {
+    font-family: var(--heading-condensed); font-weight: 700; font-style: italic;
+    font-size: 0.95rem; letter-spacing: 0.04em; text-transform: uppercase;
+    color: var(--blue-deep); margin-bottom: 12px;
+  }
+  .terms-section p {
+    font-size: 0.92rem; color: var(--ink-soft); line-height: 1.7; margin-bottom: 12px;
+  }
+  .terms-section p:last-child { margin-bottom: 0; }
+  .terms-grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 32px 48px; }
+  @media (max-width: 700px) { .terms-grid-2 { grid-template-columns: 1fr; } }
+  .terms-list { list-style: none; }
+  .terms-list li {
+    padding: 10px 0; border-bottom: 1px solid var(--line);
+    font-size: 0.92rem; color: var(--ink-soft); display: flex; gap: 12px;
+  }
+  .terms-list li:first-child { padding-top: 0; }
+  .terms-list li::before { content: '—'; color: var(--blue-deep); flex-shrink: 0; }
+
+  /* ---------- FINAL CTA ---------- */
+  .final-cta { padding: 100px 0; text-align: center; }
+  .final-cta h2 {
+    font-family: var(--display); font-weight: 300; font-size: clamp(1.9rem, 4vw, 2.8rem);
+    max-width: 700px; margin: 0 auto 24px; line-height: 1.25;
+  }
+  .final-cta h2 em { font-style: italic; font-weight: 500; color: var(--blue-deep); }
+  .final-cta p { color: var(--ink-soft); max-width: 460px; margin: 0 auto 32px; }
+
+  footer { border-top: 1px solid var(--line); padding: 48px 0; }
+  .footer-grid { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 20px; }
+  .footer-name { font-family: var(--display); font-size: 1.1rem; }
+  .footer-links { display: flex; gap: 28px; font-size: 0.85rem; }
+  .footer-links a { opacity: 0.7; }
+  .footer-links a:hover { opacity: 1; }
+  .footer-meta { font-size: 0.78rem; color: var(--slate); margin-top: 24px; }
+
+  :focus-visible { outline: 2px solid var(--blue-deep); outline-offset: 2px; }
+  @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } * { transition: none !important; } }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="wrap">
+    <div class="nav-name-group">
+      <span class="nav-name">Andrea Dalton</span>
+      <span class="nav-title">Clinical Naturopath</span>
+    </div>
+    <div class="nav-links">
+      <a href="naturopathy.html" style="opacity:1;">Naturopathy</a>
+      <a href="fertile-ground.html">Fertile Ground</a>
+    </div>
+    <a href="https://andrea-dalton.simplecliniconline.com/diary" class="nav-cta">Book now</a>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="wrap" style="text-align: center; display: flex; flex-direction: column; align-items: center;">
+    <span class="eyebrow">Naturopathy Consultations</span>
+    <h1 style="max-width: 760px;">Natural health supported by science, founded on tradition.</h1>
+    <p class="hero-sub" style="max-width: 600px; margin-left: auto; margin-right: auto;">This might be the start of your health journey, or you might be at your wits' end, told again and again that your bloods are "normal" and there's nothing more to do. I know that feeling well. I've been there too.</p>
+    <p class="hero-note">Please note: Andrea only sees women aged 18 and above.</p>
+  </div>
+</header>
+</section>
+
+<section class="welcome">
+  <div class="wrap welcome-grid" style="grid-template-columns: 0.75fr 1.25fr; align-items: center;">
+    <div>
+      <img src="images/andrea-desk.jpg" alt="Andrea Dalton smiling at her desk" style="width: 100%; aspect-ratio: 4 / 5; object-fit: cover; border-radius: 4px; display: block;">
+    </div>
+    <div>
+      <span class="welcome-label">How we work together</span>
+      <p class="welcome-statement">We peel back the layers of your health and illness journey, addressing them long term, so you get long term change.</p>
+      <div class="welcome-body" style="margin-top: 24px;">
+        <p>It might be the start of something new and amazing for you. It might also be that you're at your wits' end, trying to find answers, but keep being told by well meaning health practitioners that your bloods are "normal," you're completely healthy, and there's nothing else to do but take this pill.</p>
+        <p>When we work together, we address the reason you're experiencing these issues, through doing the right tests, making consistent dietary and lifestyle change, and using the power of herbal medicine and nutraceutical care to bring you back to balance.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="consults">
+  <div class="wrap">
+    <div class="consults-head">
+      <h2>Make an appointment</h2>
+    </div>
+    <div class="consult-grid">
+
+      <div class="consult-card featured">
+        <span class="consult-badge">New to Andrea</span>
+        <h3 class="consult-name">Initial Consultation</h3>
+        <p class="consult-meta">1.5 hours · in person or online</p>
+        <p class="consult-price">$210</p>
+        <p class="consult-desc">For your first consultation with Andrea. This longer session allows for a thorough assessment of your health goals, physical exams, health history, diet and lifestyle factors. Together we'll devise a short and long term treatment plan, which may include herbal formulas, compounds, supplements, herbal teas, nutritional advice and lifestyle advice.</p>
+        <div class="consult-note">
+          <strong>Blood test requests:</strong> if you haven't had a blood test within 6 months, get up to date pathology beforehand and send results to naturopathy@andreadalton.com.au. Fast and complete bloods first thing in the morning, rested, well, and hydrated.
+        </div>
+        <a href="https://andrea-dalton.simplecliniconline.com/diary" class="btn-primary">Book initial consult</a>
+      </div>
+
+      <div class="consult-card">
+        <span class="consult-badge">Returning clients</span>
+        <h3 class="consult-name">Follow Up Consultation</h3>
+        <p class="consult-meta">1 hour · in person or online</p>
+        <p class="consult-price">$120</p>
+        <p class="consult-desc">For reviewing pathology, presenting and adjusting treatment plans, reviewing prescriptions, and discussing progress or new symptom concerns, making sure you're on the right path toward your health goals.</p>
+        <div class="consult-note">
+          If it's been more than 8 months since you last worked with Andrea, please book an <strong>Initial Consultation</strong> rather than a follow up.
+        </div>
+        <a href="https://andrea-dalton.simplecliniconline.com/diary" class="btn-primary">Book follow up consult</a>
+      </div>
+
+    </div>
+    <p class="pricing-effective">Prices effective from 1 January 2026</p>
+  </div>
+</section>
+
+<section class="why">
+  <div class="wrap why-grid">
+    <div>
+      <span class="eyebrow">Why see a naturopath?</span>
+      <h2>A holistic approach to understanding your health, not a quick fix.</h2>
+    </div>
+    <div class="why-body">
+      <p>Naturopathy is a holistic approach. Every area of your life is considered in an in depth consultation about you. I believe everything is connected: your mental health to your gut health, your past to your present, your diet and lifestyle choices to your health.</p>
+      <img src="images/hand-moss-nature.jpg" alt="A hand reaching out to touch moss on a tree" style="width: 100%; max-height: 320px; object-fit: cover; border-radius: 4px; display: block; margin: 28px 0;">
+      <p>If you want a practitioner who takes your full health history into account, considers every system in the body, and takes the time to understand the root causes of your health concerns, not just the symptoms, you've landed on the right page.</p>
+      <p class="why-question">Now you just have to ask: am I willing to invest in myself?</p>
+    </div>
+  </div>
+</section>
+
+<section class="cred-strip">
+  <div class="wrap">
+    <p>"I'm interested in women's health because I'm a woman. I'd be a darn fool not to be on my own side."</p>
+    <cite>Maya Angelou</cite>
+  </div>
+</section>
+
+<section class="conditions">
+  <div class="wrap">
+    <div class="conditions-head">
+      <span class="eyebrow">Conditions & areas I support</span>
+      <h2>Where clients most often come to me for help</h2>
+    </div>
+    <div class="conditions-grid">
+      <div class="conditions-item">Hormonal imbalances & irregular cycles</div>
+      <div class="conditions-item">PCOS, endometriosis & other reproductive conditions</div>
+      <div class="conditions-item">Preconception & fertility preparation — see <a href="fertile-ground.html" style="color: var(--blue-deep); border-bottom: 1px solid var(--blue-deep);">Fertile Ground</a></div>
+      <div class="conditions-item">Perimenopause</div>
+      <div class="conditions-item">Gut health, bloating & digestive issues</div>
+      <div class="conditions-item">Vaginal microbiome imbalances, including recurring thrush & BV</div>
+      <div class="conditions-item">Nutrient deficiencies & fatigue</div>
+    </div>
+    <p class="conditions-note">Not sure if what you're dealing with fits here? Get in touch and ask.</p>
+  </div>
+</section>
+
+<section class="testing">
+  <div class="wrap testing-grid">
+    <div>
+      <h2>General & functional testing</h2>
+      <p class="testing-intro">I partner with pathology and functional test providers to offer a broad range of testing options, allowing for an individualised treatment plan built on real data, not guesswork.</p>
+      <div class="testing-labs">
+        <span class="testing-lab">Cobiome</span>
+        <span class="testing-lab">Juno Bio</span>
+        <span class="testing-lab">Nutripath</span>
+        <span class="testing-lab">Clinical Labs</span>
+        <span class="testing-lab">RN Labs</span>
+      </div>
+    </div>
+    <div>
+      <p class="testing-areas-label">Areas we test for</p>
+      <ul class="testing-areas">
+        <li>Gut health and gastrointestinal function</li>
+        <li>Vaginal health and microbiome imbalances</li>
+        <li>Hormone levels and patterns</li>
+        <li>Nutrient status and deficiencies</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="credentials">
+  <div class="wrap">
+    <div class="credentials-head">
+      <h2>My commitment to continued education</h2>
+      <p>Post degree study undertaken to keep deepening clinical knowledge in the areas I specialise in.</p>
+    </div>
+    <ul class="credentials-list">
+      <li><span class="cred-marker">&bull;</span><span class="cred-text">Pathology with <strong>Rachel Arthur</strong></span></li>
+      <li><span class="cred-marker">&bull;</span><span class="cred-text">Vagiversity: vaginal and genitourinary health with <strong>Dr. Moira Bradfield Strydom</strong> (PhD, B.Nat)</span></li>
+      <li><span class="cred-marker">&bull;</span><span class="cred-text">Nutrient Prescriber's Program with <strong>Rachel Arthur</strong></span></li>
+      <li><span class="cred-marker">&bull;</span><span class="cred-text">Preconception Care with <strong>Rhiannon Hardingham</strong></span></li>
+      <li><span class="cred-marker">&bull;</span><span class="cred-text">Reproductive Health Clinical Foundations with <strong>Rhiannon Hardingham</strong></span></li>
+      <li><span class="cred-marker">&bull;</span><span class="cred-text">Nourished Gut: Gut Fundamentals with <strong>Karly Raven</strong></span></li>
+      <li><span class="cred-marker">&bull;</span><span class="cred-text">Brad's Brainiacs: Microbiome Mentoring</span></li>
+    </ul>
+  </div>
+</section>
+
+<section class="terms">
+  <div class="wrap">
+    <div class="terms-head">
+      <h2>Terms & conditions</h2>
+    </div>
+
+    <div class="terms-section">
+      <p>By visiting this website or purchasing any services or products, you agree to these terms. They outline my responsibilities to you, and yours to me, under Australian Consumer Law. If you don't agree with these terms, please don't continue to use this website or make a purchase.</p>
+      <p>As a qualified clinical naturopath, I'm committed to the Code of Conduct for unregistered health practitioners.</p>
+    </div>
+
+    <div class="terms-grid-2">
+      <div class="terms-section">
+        <h3>Cancellations & rescheduling</h3>
+        <p>24 hours' notice is required for any cancellation or rescheduling. Appointments cancelled with less notice will not receive a refund or transfer of deposit. Andrea is often booked weeks in advance, and appointment times may be offered to waitlisted clients when enough notice is given.</p>
+      </div>
+      <div class="terms-section">
+        <h3>If you're unwell</h3>
+        <p>If you're experiencing cold or flu like symptoms, or are a close contact of someone with COVID-19, please contact the clinic to switch your appointment online or reschedule.</p>
+      </div>
+      <div class="terms-section">
+        <h3>Payment terms</h3>
+        <p>Online store payments are processed securely via Stripe. Payment for consultations or other services may be required up front. Direct deposit is also accepted: email naturopathy@andreadalton.com.au with your details to arrange this.</p>
+      </div>
+      <div class="terms-section">
+        <h3>Functional testing: split payments</h3>
+        <p>90% of the total is due before a test is ordered, with the remaining 10% due on receipt of results. Full payment is required within 90 days of invoice, or the invoice is cancelled and refunded. Results are released only once payment is complete.</p>
+      </div>
+    </div>
+
+    <div class="terms-section" style="margin-top: 12px;">
+      <h3>Disclaimer</h3>
+      <p>Information on this website, articles, tips, or general guidance on natural therapies, is provided for educational purposes only and is not medical advice or a substitute for diagnosis or treatment. Please book an appointment to discuss personal health concerns, or seek the advice of a trusted medical professional. Use of any information on this site is the responsibility of the reader.</p>
+    </div>
+
+    <div class="terms-section">
+      <h3>Content & attribution</h3>
+      <p>All content on this site is mine unless otherwise stated, and may be updated or removed at any time without notice. If you'd like to share it, please link back and credit my name and work. Andrea Dalton's business name, tagline and program names are unregistered trademarks.</p>
+    </div>
+  </div>
+</section>
+
+<section class="final-cta">
+  <div class="wrap">
+    <h2>Ready to find out <em>why</em>?</h2>
+    <p>Book a consultation and let's start with the right questions.</p>
+    <a href="https://andrea-dalton.simplecliniconline.com/diary" class="btn-primary">Book a consultation</a>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="footer-grid">
+      <span class="footer-name">Andrea Dalton</span>
+      <div class="footer-links">
+        <a href="naturopathy.html">Naturopathy</a>
+        <a href="fertile-ground.html">Fertile Ground</a>
+      </div>
+    </div>
+    <p class="footer-meta">© 2026 Andrea Dalton. Information on this site is general in nature and does not replace personalised medical advice.</p>
+  </div>
+</footer>
+
+</body>
+</html>
