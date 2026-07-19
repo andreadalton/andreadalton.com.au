@@ -17,6 +17,7 @@
     --slate: #71768a;
     --blue: #4a9eff;
     --blue-deep: #2e7fd9;
+    --blue-tint: #c8e4ff;
     --rose: #c97b63;
     --rose-soft: #e8d4cc;
     --line: rgba(43, 42, 40, 0.12);
@@ -100,6 +101,10 @@
     padding: 96px 0 88px;
     position: relative;
     overflow: hidden;
+    background-image: linear-gradient(180deg, rgba(240, 235, 224, 0.90) 0%, rgba(240, 235, 224, 0.94) 55%, var(--cream) 100%), url('images/pregnancy-silhouette-sunset.jpg');
+    background-size: cover;
+    background-position: center 25%;
+    background-repeat: no-repeat;
   }
   .eyebrow {
     font-family: var(--heading-condensed);
@@ -162,6 +167,25 @@
   }
   .btn-ghost:hover { opacity: 0.65; }
 
+  /* ---------- WELCOME (INTRO + PHOTO) ---------- */
+  .welcome {
+    padding: 64px 0 88px;
+    border-top: 1px solid var(--line);
+    border-bottom: 1px solid var(--line);
+  }
+  .welcome-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: start; }
+  @media (max-width: 760px) { .welcome-grid { grid-template-columns: 1fr; gap: 36px; } }
+  .welcome-label {
+    font-family: var(--heading-condensed); font-weight: 700; font-style: italic;
+    font-size: 0.85rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--slate);
+  }
+  .welcome-statement {
+    font-family: var(--display); font-size: clamp(1.4rem, 2.4vw, 1.9rem);
+    font-weight: 300; line-height: 1.42; margin-top: 14px;
+  }
+  .welcome-body p { color: var(--ink-soft); font-size: 1rem; margin-bottom: 18px; }
+  .welcome-body p:last-child { margin-bottom: 0; }
+
   /* ---------- REFRAME STATEMENT ---------- */
   .reframe {
     padding: 80px 0;
@@ -199,6 +223,65 @@
     margin-bottom: 18px;
   }
   .reframe-body p:last-child { margin-bottom: 0; }
+
+  /* ---------- PILLARS ---------- */
+  .pillars {
+    padding: 88px 0;
+    background: var(--blue-tint);
+  }
+  .pillars-grid {
+    display: grid;
+    grid-template-columns: 1.15fr 1fr;
+    gap: 56px;
+    align-items: center;
+  }
+  @media (max-width: 760px) {
+    .pillars-grid { grid-template-columns: 1fr; gap: 36px; }
+  }
+  .pillars-head { margin-bottom: 40px; }
+  .pillars-head h2 {
+    font-family: var(--display);
+    font-size: clamp(1.9rem, 3.4vw, 2.5rem);
+    font-weight: 300;
+    line-height: 1.28;
+  }
+  .pillars-head p {
+    margin-top: 16px;
+    color: var(--ink-soft);
+    font-size: 1rem;
+    max-width: 480px;
+  }
+  .pillar-list { display: flex; flex-direction: column; gap: 26px; }
+  .pillar-item { display: flex; gap: 18px; align-items: flex-start; }
+  .pillar-icon {
+    flex-shrink: 0;
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    background: var(--cream);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .pillar-icon svg { width: 20px; height: 20px; }
+  .pillar-copy h3 {
+    font-family: var(--display);
+    font-size: 1.25rem;
+    font-weight: 500;
+    margin-bottom: 6px;
+  }
+  .pillar-copy p {
+    font-size: 0.94rem;
+    color: var(--ink-soft);
+    line-height: 1.55;
+  }
+  .pillars-img {
+    width: 100%;
+    aspect-ratio: 4 / 5;
+    object-fit: cover;
+    border-radius: 4px;
+    display: block;
+  }
 
   /* ---------- WHO THIS IS FOR ---------- */
   .signals {
@@ -385,7 +468,7 @@
   /* ---------- INCLUDED / LOGISTICS ---------- */
   .included {
     padding: 88px 0;
-    background: var(--cream-deep);
+    background: var(--blue-tint);
     border-top: 1px solid var(--line);
     border-bottom: 1px solid var(--line);
   }
@@ -593,7 +676,7 @@
       <a href="naturopathy.html">Naturopathy</a>
       <a href="fertile-ground.html" style="opacity:1;">Fertile Ground</a>
     </div>
-    <a href="#enrol" class="nav-cta">Enquire</a>
+    <a href="https://andrea-dalton.simplecliniconline.com/diary" class="nav-cta">Book a discovery call</a>
   </div>
 </nav>
 
@@ -602,56 +685,26 @@
     <span class="eyebrow">The 12 Week Women's Preconception Preparation Method</span>
     <h1 style="max-width: 880px;">It's not just about whether you can conceive. It's whether your body is <em>truly ready</em> to.</h1>
     <p class="hero-sub" style="max-width: 620px; margin-left: auto; margin-right: auto;">Stop relying on social media, late night Googling and hope. Fertile Ground gives you an individualised plan and practitioner guidance well in advance of trying, so when the window opens, you're not guessing.</p>
-    <div class="hero-video" style="position: relative; width: 100%; max-width: 720px; aspect-ratio: 16 / 9; margin: 8px 0 36px; border-radius: 4px; overflow: hidden; background: var(--ink);">
-      <iframe
-        src="https://www.youtube.com/embed/0hmU-GXZfmM"
-        title="Fertile Ground: the 12 Week Women's Preconception Preparation Method"
-        style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0;"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-        allowfullscreen
-        loading="lazy">
-      </iframe>
-    </div>
 
-    <div class="hero-form" style="max-width: 560px; width: 100%; background: var(--cream-deep); border: 1px solid var(--line); border-radius: 4px; padding: 32px 30px; margin: 0 auto 36px; text-align: left;">
-      <div id="fd-form-6a3334672872e40c9b9c353e"></div>
-      <script>
-        (function (w, d, t, h, s, n) {
-          w.FlodeskObject = n;
-          var fn = function () {
-            (w[n].q = w[n].q || []).push(arguments);
-          };
-          w[n] = w[n] || fn;
-          var f = d.getElementsByTagName(t)[0];
-          var v = '?v=' + Math.floor(new Date().getTime() / (120 * 1000)) * 60;
-          var sm = d.createElement(t);
-          sm.async = true;
-          sm.type = 'module';
-          sm.src = h + s + '.mjs' + v;
-          f.parentNode.insertBefore(sm, f);
-          var sn = d.createElement(t);
-          sn.async = true;
-          sn.noModule = true;
-          sn.src = h + s + '.js' + v;
-          f.parentNode.insertBefore(sn, f);
-        })(window, document, 'script', 'https://assets.flodesk.com', '/universal', 'fd');
-
-        window.fd('form', {
-          formId: '6a3334672872e40c9b9c353e',
-          containerEl: '#fd-form-6a3334672872e40c9b9c353e'
-        });
-      </script>
-      <p style="font-size: 0.85rem; color: var(--ink-soft); margin-top: 18px; text-align: center;">
-        Prefer not to wait? <a href="https://calendly.com/naturopathy-andreadalton/30min" style="color: var(--blue-deep); border-bottom: 1px solid var(--blue-deep);">Book a time directly</a>.
-      </p>
+    <div class="hero-ctas" style="margin: 8px 0 36px;">
+      <a href="https://andrea-dalton.simplecliniconline.com/diary" class="btn-primary">Book a discovery call</a>
     </div>
   </div>
 </header>
 
-<section class="quiz-embed" style="padding: 56px 0 0;">
-  <div class="wrap">
-    <div data-sa-url="https://caf9d141-e966-4f1f-9a38-c8f02ae9ad62.scoreapp.com/?sa_target=_top" data-sa-view="inline" style="max-width: 100%; width: 100%" data-sa-auto-height="1"></div>
-    <script src="https://static.scoreapp.com/js/integration/v1/embedding.js?v=Goo0K-"></script>
+<section class="welcome">
+  <div class="wrap welcome-grid" style="grid-template-columns: 0.9fr 1.1fr; align-items: center;">
+    <div>
+      <img src="images/andrea-desk.jpg" alt="Andrea Dalton smiling at her desk" style="width: 100%; height: 100%; object-fit: cover; border-radius: 4px; display: block; min-height: 380px;">
+    </div>
+    <div>
+      <span class="welcome-label">Why I built this program</span>
+      <p class="welcome-statement">Preparing for pregnancy deserves more than a multivitamin and hope.</p>
+      <div class="welcome-body" style="margin-top: 24px;">
+        <p>When women come to me preparing for pregnancy, I see the same pattern again and again: bloods that come back "normal," symptoms brushed aside, and a vague instruction to just relax and let it happen. That's not enough when there's this much you can actually work with.</p>
+        <p>Fertile Ground exists so you're not guessing. We look properly at your gut, your hormones and your vaginal microbiome, build a plan around what we find, and work through it together over 12 weeks, so you walk into trying feeling prepared rather than hopeful.</p>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -666,6 +719,48 @@
       <p>You may wonder whether your gut health is affecting your hormones. You may have tried diets, supplements and advice online without understanding what's actually driving things. Or you simply want to walk into pregnancy knowing you've done everything you could to prepare.</p>
       <p>Fertile Ground was built to close that gap: a structured, individualised, practitioner guided process, starting with real data instead of guesswork.</p>
     </div>
+  </div>
+</section>
+
+<section class="pillars">
+  <div class="wrap pillars-grid">
+    <div>
+      <div class="pillars-head">
+        <span class="eyebrow">What the program actually works on</span>
+        <h2>It's not just "preconception." It's your gut, your hormones and your vaginal microbiome.</h2>
+        <p>These are the same foundations that shape your cycle, energy and long term health, whether pregnancy is next month or a few years away.</p>
+      </div>
+      <div class="pillar-list">
+        <div class="pillar-item">
+          <span class="pillar-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="var(--ink)" stroke-width="1.5"><path d="M12 21c-4-2-7-6-7-11a7 7 0 0 1 14 0c0 3-1 6-3 8" stroke-linecap="round"/><path d="M12 21V9" stroke-linecap="round"/></svg>
+          </span>
+          <div class="pillar-copy">
+            <h3>Gut health</h3>
+            <p>Digestion, inflammation and nutrient absorption underpin hormone production and how well your body can support a future pregnancy.</p>
+          </div>
+        </div>
+        <div class="pillar-item">
+          <span class="pillar-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="var(--ink)" stroke-width="1.5"><path d="M2 12c2-4 4-6 6-6s3 4 4 6 2 6 4 6 4-2 6-6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </span>
+          <div class="pillar-copy">
+            <h3>Hormone balance</h3>
+            <p>Cycle regularity, ovulation and hormone patterns are tracked and supported, not just assumed "normal" because bloods came back clear.</p>
+          </div>
+        </div>
+        <div class="pillar-item">
+          <span class="pillar-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="var(--ink)" stroke-width="1.5"><circle cx="12" cy="7" r="2.2"/><circle cx="7.5" cy="12" r="2.2"/><circle cx="16.5" cy="12" r="2.2"/><circle cx="12" cy="17" r="2.2"/><circle cx="12" cy="12" r="1.4" fill="var(--ink)" stroke="none"/></svg>
+          </span>
+          <div class="pillar-copy">
+            <h3>Vaginal microbiome</h3>
+            <p>Recurring thrush, BV or imbalance are investigated and treated, since vaginal health plays a direct role in fertility and pregnancy outcomes.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <img src="images/herbal-tinctures.jpg" alt="Herbal tinctures prepared for a client" class="pillars-img">
   </div>
 </section>
 
@@ -685,6 +780,7 @@
         <div class="signal-item">You want a practitioner in your corner instead of piecing things together from forums and ChatGPT.</div>
       </div>
     </div>
+    <p style="max-width: 640px; margin: 40px auto 0; text-align: center; color: var(--ink-soft); font-size: 1rem;">Not planning to conceive right now, or not sure it's on the cards at all? I'm here to support you as well — <a href="naturopathy.html" style="color: var(--blue-deep); border-bottom: 1px solid var(--blue-deep);">see how we can work together</a>.</p>
   </div>
 </section>
 
@@ -766,11 +862,10 @@
     <div>
       <h2>What's included</h2>
       <ul>
-        <li>Gut microbiome and vaginal microbiome testing</li>
         <li>Full preconception blood panel and functional review</li>
+        <li>Gut and vaginal microbiome testing</li>
         <li>Personalised nutrition and supplement protocol</li>
         <li>Regular one-on-one consultations across the 12 weeks</li>
-        <li>Live group education and mindset sessions</li>
         <li>Private community space with other women preparing for pregnancy</li>
       </ul>
     </div>
@@ -844,14 +939,6 @@
 
       <div class="faq-item" data-open="false">
         <button class="faq-q" aria-expanded="false">
-          What if I miss a live group session?
-          <span class="faq-q-icon"></span>
-        </button>
-        <div class="faq-a"><div class="faq-a-inner">Live attendance is encouraged for the discussion and connection, and recordings are provided where available so you don't lose the content if you can't make it.</div></div>
-      </div>
-
-      <div class="faq-item" data-open="false">
-        <button class="faq-q" aria-expanded="false">
           What if I am not planning pregnancy immediately?
           <span class="faq-q-icon"></span>
         </button>
@@ -899,8 +986,8 @@
         <p>Herbal prescriptions and practitioner-grade supplements are not included in the program price and are charged separately if prescribed.</p>
       </div>
       <div class="terms-block">
-        <h3>Group sessions & community access</h3>
-        <p>The program includes live group education sessions and access to a private community space, designed to provide additional support and shared learning, not to replace individual consultations.</p>
+        <h3>Community access</h3>
+        <p>The program includes access to a private community space, designed to provide additional support and shared learning, not to replace individual consultations.</p>
       </div>
       <div class="terms-block">
         <h3>No medical guarantees</h3>
@@ -910,9 +997,19 @@
   </div>
 </section>
 
-<section style="padding: 0 0 8px;">
-  <div class="wrap">
-    <img src="images/andrea-yoga-mat-front.jpg" alt="Andrea Dalton walking outdoors with a yoga mat" style="width: 100%; max-height: 640px; object-fit: contain; border-radius: 4px; display: block; background: var(--cream-deep); margin: 0 auto;">
+<section class="vsl-embed" style="padding: 8px 0 0;">
+  <div class="wrap" style="text-align: center; max-width: 720px; margin: 0 auto;">
+    <span class="eyebrow" style="display: block; margin-bottom: 18px;">Watch first</span>
+    <div class="hero-video" style="position: relative; width: 100%; aspect-ratio: 16 / 9; border-radius: 4px; overflow: hidden; background: var(--ink);">
+      <iframe
+        src="https://www.youtube.com/embed/0hmU-GXZfmM"
+        title="Fertile Ground: the 12 Week Women's Preconception Preparation Method"
+        style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0;"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen
+        loading="lazy">
+      </iframe>
+    </div>
   </div>
 </section>
 
@@ -920,7 +1017,7 @@
   <div class="wrap">
     <h2>Start preparing, <em>before</em> the trying window opens.</h2>
     <p>Get in touch to check availability for the next intake and ask anything that's still unclear.</p>
-    <a href="#enrol" class="btn-primary">Enquire about Fertile Ground</a>
+    <a href="https://andrea-dalton.simplecliniconline.com/diary" class="btn-primary">Book a discovery call</a>
   </div>
 </section>
 
