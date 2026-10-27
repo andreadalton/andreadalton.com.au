@@ -302,6 +302,12 @@
 
   :focus-visible { outline: 2px solid var(--blue-deep); outline-offset: 2px; }
   @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } * { transition: none !important; } }
+  /* ---------- FERTILE GROUND SIGNPOST ---------- */
+  .fg-signpost { padding: 88px 0; background: var(--blue-tint); text-align: center; }
+  .fg-signpost .wrap { max-width: 720px; }
+  .fg-signpost .eyebrow { color: var(--blue-deep); }
+  .fg-signpost h2 { font-family: var(--display); font-size: clamp(1.8rem, 3.4vw, 2.5rem); font-weight: 300; margin: 12px 0 18px; }
+  .fg-signpost p { color: var(--ink-soft); margin-bottom: 32px; }
 </style>
 </head>
 <body>
@@ -379,6 +385,15 @@
 
     </div>
     <p class="pricing-effective">Prices effective from 27 October 2026</p>
+  </div>
+</section>
+
+<section class="fg-signpost">
+  <div class="wrap">
+    <span class="eyebrow">Preparing for pregnancy?</span>
+    <h2>Looking for preconception or fertility support?</h2>
+    <p>Fertile Ground is my 12 week preconception program for women who want their body truly ready before they conceive. It has its own page with everything you need to know, including how to book an assessment call.</p>
+    <a href="fertile-ground.html" class="btn-primary">Explore Fertile Ground</a>
   </div>
 </section>
 
